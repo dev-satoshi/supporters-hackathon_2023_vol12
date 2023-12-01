@@ -28,7 +28,7 @@
 * Django
 * Docker
 * PostgreSQL
-* BootStrap
+* Bootstrap5
 
 #### デバイス
 * PC（Web）
