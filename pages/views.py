@@ -7,3 +7,9 @@ class HomePageView(TemplateView):
 
 class AboutPageView(TemplateView):
     template_name = "pages/about.html"
+
+class PostCreateView(TemplateView):
+    template_name = "posts/post_create.html"
+
+class PostFeedVeiw(TemplateView):
+    template_name = "posts/post_feed.html"
