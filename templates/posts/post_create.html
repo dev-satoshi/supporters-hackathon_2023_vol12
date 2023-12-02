@@ -40,38 +40,5 @@
         </div>
       </div>
     </div>
-    <script>
-      document.getElementById('post_btn').addEventListener('click', function() {
-        // 送信するデータを取得
-
-        var postData = {
-          'name_input': document.getElementById('name_input').value,
-          'address_input': document.getElementById('address_input').value,
-          'category_selected': document.getElementById('category').value,
-          'content': document.getElementById('post_content1').value
-        };
-        console.log(postData)
-
-      // Ajaxリクエストを作成
-      $.ajax({
-        type: 'POST',
-        url: 'https://localhost/post_create/',
-        contentType: 'application/json',
-        dataType: 'json',
-        data: JSON.stringify(postData),
-        timeout: 5000,
-        success: function(response) {
-          document.getElementById("reslt").innerHTML = "送信成功"
-          console.log(response);
-          // 成功時の処理
-        },
-        error: function(error) {
-          document.getElementById("reslt").innerHTML = "通信エラー"
-          console.error('通信エラー:', error);
-          // エラー時の処理
-        }
-      });
-    });
-    </script>
   </body>
 </html>
