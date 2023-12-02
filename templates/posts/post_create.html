@@ -2,6 +2,7 @@
 {% load static %}
     {% block title %}投稿ページ{% endblock title %}
     {% block css %}
+    {{ block.super }}
     <link rel="stylesheet" type="text/css" href="{% static 'css/post_create.css' %}" />
     {% endblock css %}
     
