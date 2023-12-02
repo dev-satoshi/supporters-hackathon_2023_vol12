@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-SECRET_KEY
 SECRET_KEY = "django-insecure-0peo@#x9jur3!h$ryje!$879xww8y1y66jx!%*#ymhg&jkozs2"
 
-# https://docs.djangoproject.com/en/dev/ref/settings/#debug
+#tps://docs.djangoproject.com/en/dev/ref/settings/#debug ht
 DEBUG = True
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
     "django.contrib.sites",
+    'rest_framework',
     # Third-party
     "allauth",
     "allauth.account",
