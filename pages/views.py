@@ -16,7 +16,7 @@ class PostCreateView(TemplateView):
     template_name = "posts/post_create.html"
 
 
-class PostFeedVeiw(TemplateView):
+class PostFeedView(TemplateView):
     template_name = "posts/post_feed.html"
 
 
