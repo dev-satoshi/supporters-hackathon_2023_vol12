@@ -1,6 +1,5 @@
 from django.urls import include, path
 
-# viewのクラスをインポート
 from .views import AboutPageView, HomePageView
 
 urlpatterns = [
