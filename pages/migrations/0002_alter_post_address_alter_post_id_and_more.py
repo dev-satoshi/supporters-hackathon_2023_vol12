@@ -4,30 +4,29 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('pages', '0001_initial'),
+        ("pages", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='post',
-            name='address',
+            model_name="post",
+            name="address",
             field=models.TextField(),
         ),
         migrations.AlterField(
-            model_name='post',
-            name='id',
-            field=models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID'),
+            model_name="post",
+            name="id",
+            field=models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID"),
         ),
         migrations.AlterField(
-            model_name='post',
-            name='location_name',
+            model_name="post",
+            name="location_name",
             field=models.CharField(max_length=100),
         ),
         migrations.AlterField(
-            model_name='post',
-            name='post_content',
+            model_name="post",
+            name="post_content",
             field=models.TextField(),
         ),
     ]
