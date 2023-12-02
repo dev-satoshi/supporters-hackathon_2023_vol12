@@ -15,7 +15,7 @@ class AboutPageView(TemplateView):
     template_name = "pages/about.html"
 
 
-class CreatePostView(TemplateView):
+class CreatePostView(FormView):
     template_name = "posts/post_create.html"
-    form_class = CreatePostForm()
+    form_class = CreatePostForm
     success_url = "/success/"  # フォーム送信成功後にリダイレクトするURL
