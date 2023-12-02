@@ -1,14 +1,11 @@
+{% extends "_base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>投稿ページ</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {% block title %}投稿ページ{% endblock title %}
+    {% block css %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/post_create.css' %}" />
-  </head>
-  <body>
+    {% endblock css %}
+    
+    {% block content %}
     <div class="post">
       <div id="reslt"></div>
       <h1>投稿ページです。</h1>
@@ -43,5 +40,7 @@
         </form>
       </div>
     </div>
-  </body>
-</html>
+    {% endblock content %}
+    {% block javascript %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {% endblock javascript %}
