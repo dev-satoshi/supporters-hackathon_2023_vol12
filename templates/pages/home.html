@@ -7,13 +7,12 @@
 <h1 class="hedding-text">Home page</h1>
 <div class="row">
   {% for post in posts %}
-  <div class="col-md-4">
     <div class="card h-100">
       {% if post.images %}
       <img src="{{ post.images.url }}" class="card-img-top">
       {% endif %}
       <div class="card-body">
-        <h5 class="card-title">{{ post.location_name }}</h5>
+        <h5 class="card-title"><a href="{% url 'detail-post' pk=post.id %}">{{ post.location_name }}</a></h5>
         <p class="card-text">{{ post.address }}</p>
         <p class="card-text">{{ post.post_content }}</p>
         <p class="card-text">{{ post.category }}</p>
