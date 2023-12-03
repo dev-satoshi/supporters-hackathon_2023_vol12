@@ -36,6 +36,10 @@ body {
   margin-bottom: 40px;
 }
 
+h5 a {
+  text-decoration: none;
+}
+
 .col-md-4 {
   margin-bottom: 30px;
 }

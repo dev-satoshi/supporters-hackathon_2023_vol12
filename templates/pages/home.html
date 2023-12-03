@@ -17,7 +17,8 @@
           <h5 class="card-title"><a href="{% url 'detail-post' pk=post.id %}">{{ post.location_name }}</a></h5>
           <p class="card-text">{{ post.address }}</p>
           <p class="card-text">{{ post.post_content }}</p>
-          <p class="card-text">{{ post.category }}</p>
+          <button type="button" class="btn btn-success">{{ post.category }}</button>
+          <!-- <p class="card-text">{{ post.category }}</p> -->
         </div>
       </div>
     </div>
