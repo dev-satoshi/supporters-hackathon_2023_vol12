@@ -1,0 +1,28 @@
+{% extends "_base.html" %} {% load static %} {% block title %}投稿ページ{% endblock title %} {% block css %} {{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'css/post_create.css' %}" />
+{% endblock css %} {% block content %}
+
+<!-- コンテンツエリア -->
+<div class="container my-4">
+  <div class="row">
+    <div class="col-12 mb-3">
+      <div class="content p-3">
+        <h1 class="location_name mb-3">{{ post.location_name }}</h1>
+        <div class="category mb-2">{{ post.category }}</div>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <img src="{{ post.images.url }}" alt="画像" class="img-fluid" />
+          </div>
+          <div class="col-md-6">
+            <div class="location_name mb-2">{{post.location_name}}</div>
+            <div class="address mb-2">{{ post.address }}</div>
+            <div class="post_content">{{ post.contents}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %} {% block javascript %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+{% endblock javascript %}
