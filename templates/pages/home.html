@@ -4,11 +4,10 @@
 {% block title %}Home page{% endblock title %}
 
 {% block content %}
-<h1>Home page</h1>
-{% for post in posts %}
-
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
+<h1 class="hedding-text">Home page</h1>
+<div class="row">
+  {% for post in posts %}
+  <div class="col-md-4">
     <div class="card h-100">
       {% if post.images %}
       <img src="{{ post.images.url }}" class="card-img-top">
@@ -21,7 +20,6 @@
       </div>
     </div>
   </div>
+  {% endfor %}
 </div>
-
-{% endfor %}
 {% endblock content %}
