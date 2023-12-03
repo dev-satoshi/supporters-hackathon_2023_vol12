@@ -1,8 +1,8 @@
-from django import forms
+from django.forms import ModelForm
+from .models import Post
 
 
-class CreatePostForm(forms.Form):
-    location_name = forms.CharField(max_length=100, label="穴場スポットの名前")
-    address = forms.CharField(max_length=200, label="住所")
-    category = forms.ChoiceField(label="ジャンル")
-    contents = forms.CharField(max_length=1000, label="共有したい内容", widget=forms.Textarea)
+class CreatePostForm(ModelForm):
+    class Meta:
+        model = Post
+        fields = ['location_name', 'address', 'category', 'post_content']

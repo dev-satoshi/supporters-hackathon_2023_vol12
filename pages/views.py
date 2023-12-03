@@ -1,21 +1,42 @@
-from django.http.response import HttpResponse
-from django.shortcuts import render
-from django.views.generic import TemplateView
-from django.views.generic.edit import FormView
+from django.urls import reverse_lazy
+from django.views.generic import CreateView, DeleteView, DetailView, ListView
 
 from .forms import CreatePostForm
 from .models import Post
 
 
-class HomePageView(TemplateView):
+class HomePageView(ListView):
+    model = Post
     template_name = "pages/home.html"
+    context_object_name = "posts"
 
 
-class AboutPageView(TemplateView):
+class AboutPageView(ListView):
+    model = Post
     template_name = "pages/about.html"
+    context_object_name = "posts"
 
 
-class CreatePostView(FormView):
-    template_name = "posts/post_create.html"
+class PostCreateView(CreateView):
+    model = Post
     form_class = CreatePostForm
-    success_url = "/success/"  # フォーム送信成功後にリダイレクトするURL
+    template_name = "pages/post_create.html"
+    success_url = reverse_lazy("home")
+
+
+class PostDetailView(DetailView):
+    model = Post
+    template_name = "pages/post_detail.html"
+    context_object_name = "post"
+
+
+class PostDeleteView(DeleteView):
+    model = Post
+    template_name = "pages/post_delete.html"
+    success_url = reverse_lazy("home")
+    template_name = "pages/post_create.html"
+    form_class = CreatePostForm
+    class PostDeleteView(DeleteView):
+        model = Post
+        template_name = "pages/post_delete.html"
+        success_url = "/"
