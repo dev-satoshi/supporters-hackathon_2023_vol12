@@ -8,7 +8,6 @@
     <div class="col-12 mb-3">
       <div class="content p-3">
         <h1 class="hedding-text">{{ post.location_name }}</h1>
-        <div class="category mb-2">{{ post.category }}</div>
         <div class="row g-3">
           <div class="col-md-6">
             <img src="{{ post.images.url }}" alt="画像" class="img-fluid" />
@@ -17,6 +16,7 @@
             <div class="location_name mb-2">{{post.location_name}}</div>
             <div class="address mb-2">{{ post.address }}</div>
             <div class="post_content">{{ post.contents}}</div>
+            <button type="button" class="btn btn-success">{{ post.category }}</button>
           </div>
         </div>
       </div>
