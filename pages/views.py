@@ -29,14 +29,7 @@ class PostDetailView(DetailView):
     template_name = "pages/post_detail.html"
     context_object_name = "post"
 
-
 class PostDeleteView(DeleteView):
     model = Post
     template_name = "pages/post_delete.html"
-    success_url = reverse_lazy("home")
-    template_name = "pages/post_create.html"
-    form_class = CreatePostForm
-    class PostDeleteView(DeleteView):
-        model = Post
-        template_name = "pages/post_delete.html"
-        success_url = "/"
+    success_url = "/"
