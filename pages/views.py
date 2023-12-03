@@ -11,12 +11,6 @@ class HomePageView(ListView):
     context_object_name = "posts"
 
 
-class AboutPageView(ListView):
-    model = Post
-    template_name = "pages/about.html"
-    context_object_name = "posts"
-
-
 class PostCreateView(CreateView):
     model = Post
     form_class = CreatePostForm
