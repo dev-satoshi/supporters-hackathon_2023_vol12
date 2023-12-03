@@ -5,4 +5,23 @@
 
 {% block content %}
 <h1>Home page</h1>
+{% for post in posts %}
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      {% if post.images %}
+      <img src="{{ post.images.url }}" class="card-img-top">
+      {% endif %}
+      <div class="card-body">
+        <h5 class="card-title">{{ post.location_name }}</h5>
+        <p class="card-text">{{ post.address }}</p>
+        <p class="card-text">{{ post.post_content }}</p>
+        <p class="card-text">{{ post.category }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endfor %}
 {% endblock content %}
