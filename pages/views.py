@@ -9,6 +9,7 @@ class HomePageView(ListView):
     model = Post
     template_name = "pages/home.html"
     context_object_name = "posts"
+    ordering = ["-id"]
 
 
 class PostCreateView(CreateView):
@@ -22,6 +23,7 @@ class PostDetailView(DetailView):
     model = Post
     template_name = "pages/post_detail.html"
     context_object_name = "post"
+
 
 class PostDeleteView(DeleteView):
     model = Post
