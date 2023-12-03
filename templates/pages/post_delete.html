@@ -1,0 +1,15 @@
+{% extends "_base.html" %}
+{% load static %}
+    {% block title %}削除確認ページ{% endblock title %}
+    {% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/post_create.css' %}" />
+    {% endblock css %}
+
+    {% block content %}
+    <h1>削除完了</h1>
+    <a href="{% url 'home' %}" class="nav-link px-2 link-secondary">トップページに戻る</a>
+    {% endblock content %}
+    {% block javascript %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {% endblock javascript %}

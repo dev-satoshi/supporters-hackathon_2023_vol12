@@ -7,16 +7,27 @@
   <div class="row">
     <div class="col-12 mb-3">
       <div class="content p-3">
-        <h1 class="hedding-text">{{ post.location_name }}</h1>
-        <div class="category mb-2">{{ post.category }}</div>
+        <h1 class="hedding-text">Detail</h1>
         <div class="row g-3">
           <div class="col-md-6">
+            {% if post.images %}
             <img src="{{ post.images.url }}" alt="画像" class="img-fluid" />
+            {% endif %}
           </div>
           <div class="col-md-6">
-            <div class="location_name mb-2">{{post.location_name}}</div>
+            <h2 hclass="location_name mb-2">{{post.location_name}}</h2>
             <div class="address mb-2">{{ post.address }}</div>
-            <div class="post_content">{{ post.contents}}</div>
+            <div class="post_content">{{ post.post_content}}</div>
+            <button type="button" class="btn btn-success">{{ post.category }}</button>
+
+            <form action="{% url 'update-post' post.id %}" method="GET">
+              {% csrf_token %}
+              <input type="submit" value="更新">
+            </form>
+            <form action="{% url 'delete-post' post.id %}" method="POST">
+              {% csrf_token %}
+              <input type="submit" value="削除">
+            </form>
           </div>
         </div>
       </div>
