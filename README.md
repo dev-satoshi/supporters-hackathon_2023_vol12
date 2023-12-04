@@ -1,5 +1,4 @@
-
-# supporters-hackthon_2023_vol12
+# supporters-hackathon_2023_vol12
 
 ![Alt text](<docs/スクリーンショット 2023-12-03 17.09.26 2.jpg>)
 ## 🖋 スライドURL
