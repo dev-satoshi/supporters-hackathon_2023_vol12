@@ -4,7 +4,6 @@
 ## 🖋 スライドURL
 [Google Slide](https://docs.google.com/presentation/d/18F0MvLb2iFkEcx4tbvlLfQiHMqNLTol2MH6g-Far2_Y/edit#slide=id.p)
 
-
 ## 💪 製品概要
 自分しか知らない穴場スポットを共有する掲示板サイト
 
@@ -19,10 +18,7 @@
 - 位置情報の紐付け
 - 検索機能
 
-
-
 ## 開発技術情報
-
 ### 活用技術
 * Python
 * Django
@@ -30,5 +26,5 @@
 * PostgreSQL
 * Bootstrap5
 
-#### デバイス
+### デバイス
 * PC（Web）
