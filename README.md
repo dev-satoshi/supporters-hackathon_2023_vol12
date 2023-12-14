@@ -23,6 +23,7 @@
 * Python
 * Django
 * Docker
+* Redis
 * PostgreSQL
 * Bootstrap5
 
