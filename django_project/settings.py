@@ -107,6 +107,18 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# https://docs.djangoproject.com/ja/5.0/topics/cache/#redis
+CACHES = {
+    "default": {
+        # "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://0.0.0.0:6379/",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        },
+    }
+}
+
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 # https://docs.djangoproject.com/en/dev/ref/settings/#language-code
 LANGUAGE_CODE = "ja"
