@@ -1,10 +1,13 @@
 from django.urls import reverse, reverse_lazy
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, UpdateView
 
 from .forms import CreatePostForm, UpdatePostForm
 from .models import Post
 
 
+@method_decorator(cache_page(60 * 15), name="dispatch")
 class HomePageView(ListView):
     model = Post
     template_name = "pages/home.html"
